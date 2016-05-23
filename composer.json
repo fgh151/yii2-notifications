@@ -1,5 +1,6 @@
 {
     "name": "fgh151/yii2-noifications",
+    "version" : "0.0.1",
     "description": "Yii2 notifications module",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","notify"],

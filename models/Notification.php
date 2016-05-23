@@ -52,4 +52,24 @@ class Notification extends \yii\db\ActiveRecord
             'Type' => 'Тип'
         ];
     }
+
+    /**
+     * @param string $type
+     * @param string $message
+     * @param array|integer $user
+     */
+    public static function send($type, $message, $user)
+    {
+        if(is_array($user)) {
+            foreach ($user as $item) {
+                self::send($type, $message, $item);
+            }
+        } else {
+            $notify = new Notification();
+            $notify->Message = $message;
+            $notify->UserId = $user;
+            $notify->Type = $type;
+            $notify->save();
+        }
+    }
 }

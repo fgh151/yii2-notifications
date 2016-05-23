@@ -42,6 +42,27 @@ Once the extension is installed, simply use it in your code to config  :
 then include widget on pages where module will be:
 
 ```php
-
 echo fgh151\notifications\widgets\notifications\Widget::widget();
+```
+
+API
+---
+
+You can direct create message, for example:
+```php
+$notify = new fgh151\notifications\models\Notification();
+$notify->Message = $message;
+$notify->UserId = $user;
+$notify->Type = $type;
+$notify->save();
+```
+
+or you can use method send:
+```php
+fgh151\notifications\models\Notification::send('info', 'Info message' , 127);
+```
+where first argument - type of bootstrap message, second - message text, third - receiver user id, also you can send array of users, for example:
+
+```php
+fgh151\notifications\models\Notification::send('info', 'Info message' , [1,2,3,4,5]);
 ```
