@@ -2,7 +2,7 @@
     "name": "fgh151/yii2-noifications",
     "description": "Yii2 notifications module",
     "type": "yii2-extension",
-    "keywords": ["yii2","extension",""],
+    "keywords": ["yii2","extension","notify"],
     "license": "MIT",
     "authors": [
         {
