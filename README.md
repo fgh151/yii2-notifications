@@ -2,6 +2,9 @@ Yii2 notifications module
 =========================
 Yii2 notifications module
 
+This module provide functions to send notifications to user. Implements admin part where you can wie messages and create item. 
+In frontend messages will be in bootstrap alert box, By the timer widget ask backend for new messages and show them.
+
 Installation
 ------------
 
@@ -34,4 +37,11 @@ Once the extension is installed, simply use it in your code to config  :
             'class' => 'fgh151\notifications\Module'
         ]
     ]
+```
+
+then include widget on pages where module will be:
+
+```php
+
+echo fgh151\notifications\widgets\notifications\Widget::widget();
 ```
