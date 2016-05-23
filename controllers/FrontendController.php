@@ -13,6 +13,16 @@ class FrontendController extends \yii\rest\Controller
             'Read' => false
         ])->all();
     }
+    
+    public function actionCheck($id)
+    {
+        $ids = explode(',', $id);
+
+        return Notification::find()->where([
+            'UserId' => \Yii::$app->user->identity->getId(),
+            'Read' => false,
+        ])->andWhere(['not in', 'Id', $ids])->all();
+    }
 
     public function actionRead($id)
     {

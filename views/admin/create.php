@@ -4,10 +4,10 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Notification */
+/* @var $model \fgh151\notifications\models\Notification */
 
-$this->title = 'Create Notification';
-$this->params['breadcrumbs'][] = ['label' => 'Notifications', 'url' => ['index']];
+$this->title = 'Послать уведомление';
+$this->params['breadcrumbs'][] = ['label' => 'Уведомления', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="notification-create">

@@ -45,11 +45,11 @@ class Notification extends \yii\db\ActiveRecord
     {
         return [
             'Id' => 'ID',
-            'UserId' => 'User ID',
-            'Message' => 'Message',
-            'DateSend' => 'Date Send',
-            'Read' => 'Read',
-            'Type' => 'Type'
+            'UserId' => 'Получатель',
+            'Message' => 'Сообщение',
+            'DateSend' => 'Дата отправки',
+            'Read' => 'Прочитано?',
+            'Type' => 'Тип'
         ];
     }
 }
