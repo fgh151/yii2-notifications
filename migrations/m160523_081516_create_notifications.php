@@ -17,7 +17,8 @@ class m160523_081516_create_notifications extends Migration
             'UserId' => $this->integer()->notNull(),
             'Message' =>$this->string()->notNull(),
             'DateSend' => $this->timestamp()->notNull(),
-            'Read' => $this->boolean()->defaultValue(false)
+            'Read' => $this->boolean()->defaultValue(false),
+            'Type' => $this->string()
         ]);
     }
 

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Notification */
+/* @var $model \fgh151\notifications\models\Notification */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -19,6 +19,13 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'DateSend')->widget(\yii\jui\DatePicker::classname(), [
         'language' => 'ru',
         'dateFormat' => 'yyyy-MM-dd',
+    ]) ?>
+
+    <?= $form->field($model, 'Type')->dropDownList([
+        'success' => 'Успех',
+        'info' => 'Информация',
+        'warning' => 'Предупреждение',
+        'danger' => 'Тревога'
     ]) ?>
 
     <?= $form->field($model, 'Read')->checkbox() ?>

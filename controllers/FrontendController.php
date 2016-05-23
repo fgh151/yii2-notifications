@@ -2,16 +2,23 @@
 
 namespace fgh151\notifications\controllers;
 
-class FrontendController extends \yii\web\Controller
+use fgh151\notifications\models\Notification;
+
+class FrontendController extends \yii\rest\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        return Notification::find()->where([
+            'UserId' => \Yii::$app->user->identity->getId(),
+            'Read' => false
+        ])->all();
     }
 
-    public function actionRead()
+    public function actionRead($id)
     {
-        return $this->render('read');
+        $notify = Notification::findOne($id);
+        $notify->Read = true;
+        return $notify->save();
     }
 
 }

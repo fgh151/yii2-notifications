@@ -12,6 +12,7 @@ use Yii;
  * @property string $Message
  * @property string $DateSend
  * @property boolean $Read
+ * @property string $Type
  */
 class Notification extends \yii\db\ActiveRecord
 {
@@ -33,7 +34,7 @@ class Notification extends \yii\db\ActiveRecord
             [['UserId'], 'integer'],
             [['DateSend'], 'safe'],
             [['Read'], 'boolean'],
-            [['Message'], 'string', 'max' => 255],
+            [['Message', 'Type'], 'string', 'max' => 255],
         ];
     }
 
@@ -48,6 +49,7 @@ class Notification extends \yii\db\ActiveRecord
             'Message' => 'Message',
             'DateSend' => 'Date Send',
             'Read' => 'Read',
+            'Type' => 'Type'
         ];
     }
 }
