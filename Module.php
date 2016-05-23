@@ -2,7 +2,7 @@
 
 namespace fgh151\notifications;
 
-class Module extends \yii\base\Widget
+class Module extends \yii\base\Module
 {
     public function init()
     {
