@@ -16,7 +16,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Message')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'DateSend')->textInput() ?>
+    <?= $form->field($model, 'DateSend')->widget(\yii\jui\DatePicker::classname(), [
+        'language' => 'ru',
+        'dateFormat' => 'yyyy-MM-dd',
+    ]) ?>
 
     <?= $form->field($model, 'Read')->checkbox() ?>
 

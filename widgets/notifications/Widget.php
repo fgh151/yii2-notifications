@@ -10,11 +10,11 @@ class Widget extends \yii\base\Widget
     
     public function init()
     {
-        $this->notifications = Notification::find()->where(['UserId' => \Yii::$app->user->identity->getId()]);
+        $this->notifications = Notification::find()->where(['UserId' => \Yii::$app->user->identity->getId()])->all();
     }
     
     public function run()
     {
-        var_dump($this->notifications);
+        print_r($this->notifications);
     }
 }
