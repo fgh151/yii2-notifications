@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fgh151\\notifycations\\": ""
+            "fgh151\\notifications\\": ""
         }
     }
 }
